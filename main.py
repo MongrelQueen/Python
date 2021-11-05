@@ -253,8 +253,8 @@
 
 #set = collection which is unordered, unindexed. No duplicate values.
 
-utensils = {"fork", "spoon", "knife", "spork"}
-dishes = {"bowl", "plate", "cup", "knife"}
+# utensils = {"fork", "spoon", "knife", "spork"}
+# dishes = {"bowl", "plate", "cup", "knife"}
 
 # utensils.add("napkin")
 # utensils.remove("napkin")
@@ -271,3 +271,150 @@ dishes = {"bowl", "plate", "cup", "knife"}
 #dictionary = changable unordered collection of unique keey:value pairs
 #Fast because they use hashing, allow access to value quickly
 
+# capitals = {'USA':'Washington DC',
+#             'India': 'New Dehli',
+#             'China': 'Beijing',
+#             'Russia': 'Moscow'}
+#
+# capitals.update({'Germany':'Berlin'})
+# capitals.update({'USA':'Las Vegas'})
+# capitals.pop('China')
+# capitals.clear()
+
+# print(capitals['Russia'])
+# print(capitals.get('Germany'))
+# print(capitals.keys()) #prints only keys and not values
+# print(capitals.values()) #prints only values and not keys
+# print(capitals.items()) #prints everything
+
+# for key,value in capitals.items():
+#     print(key, value)
+
+# index operator [] = gives access to a sequence's element
+#str,list,tuples
+
+# name = "jaca Nemo!"
+#
+# # if(name[0].islower()):
+# #     name = name.capitalize()
+#
+# firstname = name[:4].upper()
+# lastname = name[5:].lower()
+# lastchar = name[-1]
+#
+# print(firstname)
+# print(lastname)
+# print(lastchar)
+
+#function = a bloc of code executed only when it is called.
+
+# def hello(firstname, secondname, age):
+#     print("Hello "+firstname+" "+secondname)
+#     print("You are lucky number "+str(age)+" winner.")
+#     print("Have a nice day!")
+#
+# # my_name = "Stu"
+# # hello(my_name)
+# #
+# # hello("Jaca")
+# # hello("Dude")
+# hello("Chris", "Jaden", 13)
+
+#return statement = Functions send Python values/objects back to caller.
+                #   These values/objects are known as the fuction's return value
+
+# def multiply(num1, num2):
+#    return num1 * num2
+#
+#
+# x = multiply(6,8)
+# print(x)
+
+#keyword arguments
+
+# def hello(first,middle,last):
+#    print("Hello "+first+" "+middle+" "+last)
+#
+# hello(last="III", first="Jaca", middle="Nemo")
+
+#nested function calls = function calls inside other function calls
+
+# num = input("Enter a while positive number: ")
+# num = float(num)
+# num = abs(num)
+# num = round(num)
+# print(num)
+
+# print(round(abs(float(input("Enter a whole positive number: ")))))
+
+#scope = the region that a variable is recognized
+#A variable is only available from inside the region it is created
+#A global and locally scoped sersions of a variable can be created
+
+# name = "Jaca" #global scope = available inside & outside functions
+#
+# def display_name():
+#     name = "Nemo" #local scope = available only inside this function
+#     print(name)
+# display_name()
+# print(name)
+
+#LEGB rule = Local, Enclosing, Global, Built-in
+
+#*args = parameter that will pack all arguments into a tuple
+#useful so a function can accept a varying amount of arguments
+
+# def add(*narf):
+#     sum = 0
+#     narf = list(narf)
+#     narf[0] = 0
+#     for i in narf:
+#         sum += i
+#     return sum
+#
+# print(add(1,2,3,4,5,6))
+
+# **kwargs = parameter that will pack all arguments into a dictionary
+#useful so that a function can accept a varying amount of keyword arguments
+
+#*args = varying amount of positional arguments into tuples
+#**kwargs = varying amount of keyword arguments into dictionary
+
+# def hello(**names):
+#     #print("Hello "+kwargs['first']+" "+kwargs['last'])
+#     print("Hello", end=" ")
+#     for key,value in names.items():
+#         print(value, end=" ")
+#
+# hello(title="Queen",first="Jaca", middle="Narf", last="Nemo")
+
+# str.format() = optional method gives user more control when displaying output
+
+# animal = "cow"
+# item = "moon"
+#
+# #print("The "+animal+" jumped over the "+item)
+# print("The {} jumped over the {}".format(animal,"moon"))
+# print("The {0} jumped over the {0}".format(animal,"moon")) #positional argument
+# print("The {item} jumped over the {item}".format(animal="cow",item="moon")) #keyword argument
+#
+# text = "The {} jumped over the {}"
+# print(text.format(item, animal))
+
+# name = "Jaca"
+# print("Hello, my name is {}".format(name))
+# print("Hello, my name is {:10}. Nice to meet you.".format(name)) #padding
+# print("Hello, my name is {:<10}. Nice to meet you.".format(name)) #left aline
+# print("Hello, my name is {:>10}. Nice to meet you.".format(name)) #right aline
+# print("Hello, my name is {:^10}. Nice to meet you.".format(name)) #center aline
+
+# number = 1000
+#
+# print("The number pi is {:.2f}".format(number)) #f is for floating point number
+# print("The number is {:,}".format(number))
+# print("The number is {:b}".format(number)) #binary
+# print("The number is {:o}".format(number)) #octal number
+# print("The number is {:x}".format(number)) #hexadecimal
+# print("The number is {:X}".format(number)) #hexadecimal
+# print("The number is {:e}".format(number)) #scientific notation
+# print("The number is {:E}".format(number)) #scientific notation
