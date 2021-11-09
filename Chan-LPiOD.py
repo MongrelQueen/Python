@@ -163,7 +163,7 @@ else:
 #the syntax for looping through an iterable ->
 #for a in iterable:
     #print(a)
-
+'''
 pets = ['cats', 'dogs', 'rabbits', 'hamsters', 'horses', 'birds']
 for myPets in pets:
     print(myPets)
@@ -175,3 +175,119 @@ for i in age:
     print(i)
 for i in age:
     print("Name = %s, Age = %d" %(i, age[i]))
+for i, j in age.items():
+    print("Name = %s, Age = %d" %(i,j))
+'''
+#message = 'Hello'
+#for i in message:
+#    print(i)
+#for ind, i in enumerate (message):
+#    print(ind, i)
+'''
+for i in range(5):
+    print(i)
+for i in range(3,10):
+    print(i)
+for i in range(4, 10, 2):
+    print(i)
+'''
+#counter = 5
+#while counter >0:
+#    print("Counter = ", counter)
+#    counter -= 1
+'''
+j = 0
+for i in range(5):
+    j += 2
+    print ('i = ', i, ', j = ', j)
+    if j == 6:
+        break
+'''
+
+#j = 0
+#for i in range(5):
+#    j += 2
+#    print('\ni = ', i, ', j = ', j)
+#    if j == 6:
+#        continue
+#    print ('I will be skipped over if j = 6')
+'''
+try:
+    answer = 12/0
+    print(answer)
+except:
+    print("An error occurred")
+'''
+'''
+try:
+    userInput1 = int(input("Please enter a number: "))
+    userInput2 = int(input("Please enter another number: "))
+    answer = userInput1/userInput2
+    print("The answer is: ", answer)
+    myFile = open("missing.txt",'r')
+except ValueError:
+    print("Error: You did not enter a number")
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero")
+except Exception as e:
+    print("Unknown error: ", e)
+'''
+#If you want to display the message, use the 'as' keyword after the error type ->
+#except ValueError as e:
+#   print (e)
+'''
+print("Hello World")
+newString = "Hello World".replace("World","Universe")
+print(newString)
+'''
+#defining your own function ->
+#def functionName(list of parameters):
+#    code detailing what the function should do
+#    return [expression]
+'''
+def checkIfPrime (numberToCheck):
+    for x in range(2, numberToCheck): #a for loop to divide the parameter numberToCheck by all numbers from 2 to numberToCheck - 1 to determine if the remainder is zreo
+        if (numberToCheck%x == 0):
+            return False
+    return True
+'''
+'''
+message1 = "Global Variable"
+
+def myFunction():
+    print("\nINSIDE THE FUNCTION")
+   #Global variables are accessible inside a function
+    print(message1)
+   #Declaring a local variable
+    message2 = "Local Variable"
+    print(message2)
+'''
+#Calling the function
+#Note that myFunction() has no parameters.
+#Hence, when we call this function,
+#we use a pair of empty parentheses.
+'''
+myFunction()
+print("\nOUTSIDE THE FUNCTION")
+
+#Global variables are accessible outside function
+print(message1)
+#Local variables are NOT accessible outside function.
+print(message2)
+'''
+'''
+message1 = "Global Variable (shares name w/local variable)"
+
+def myFunction():
+    message1 = "Local Variable(shares name w/global variable)"
+    print("\nINSIDE THE FUNCTION")
+    print(message1)
+
+#Calling the function
+myFunction()
+
+print("\nOUTSIDE THE FUNCTION")
+print(message1)
+'''
+
+
