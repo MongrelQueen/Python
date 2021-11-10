@@ -290,4 +290,61 @@ print("\nOUTSIDE THE FUNCTION")
 print(message1)
 '''
 
+#def someFunction(a, b, c = 1, d = 2, e = 3):
+#    print(a, b, c, d, e)
+
+#someFunction(10, 20)
+#someFunction(10,20,30,40)
+
+#use * if you do not know the number of arguments a function has in advance
+'''
+def addNumbers(*num):
+    sum = 0
+    for i in num:
+        sum += i
+    print(sum)
+
+addNumbers(1, 2, 3, 4, 5, 6, 7, 8)
+'''
+#use double asterisks ** for unknown dictionary
+'''
+def printMemberAge(**age):
+    for i, j in age.items():
+        print("Name = %s, Age = %s" %(i, j))
+
+printMemberAge(Ayla = 1, Beau = 1)
+printMemberAge(Jaden = 30, Ayla = 1, Beau = 1)
+'''
+
+#if your function uses a normal argument (formale argument)
+#a non-keyword variable length argument list
+#and a keyword variable length argument list
+#these must be deinfed in the following order:
+#def someFunc(farg, *args, **kwargs):
+#formal first, followed by non-keyworded, & then keyworded argument
+
+'''
+Importing Modules
+built-in functions
+3 ways to import
+1st -> import moduleName
+    to import random module -> import random
+    to use randrange() function in random module -> random.randrange(1, 10)
+2nd -> or you can write import random as 'r' (where r is any name of your choice) and use randrange function by writing r.randrange(1, 10)
+3rd -> or you could import specific functions from the module by writing -> from moduleName import name1[, name2[,...nameN]]
+
+if you want to import more than one function -> seperate them with a comma.
+to import the randrange() and randint() functions -> random import randrange, randint and to use -> randrange(1, 10)
+'''
+
+#creating your own module
+#simply save the file with a .py extension and put it in the same folder as the Python file that you are going to import it from.
+
+#'r' mode -> reading only
+#'w' mode -> writing only -> If the specified file doesn't exist, it will be created. If specified file exists, any existing data will be erased.
+#'a' mode -> for appending -> If the specified file doesn't exist, it will be created. If specified file exists, any data written to the file is automatically added to the end.
+#'r+' mode -> for both reading & writing
+
+#binary files refer to any file that contains non-text, such as image or video files
+#use 'rb' or 'wb' mode
 
